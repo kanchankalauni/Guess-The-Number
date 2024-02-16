@@ -64,7 +64,7 @@ function checkGuess(guess) {
 function displayGuess(guess) {
     //To empty the user input and update the array values acc to the guess
     userInput.value = ''
-    guessesSlot.innerHTML += `${guess}  `
+    guessesSlot.innerHTML += `${guess},   `
     remaining.innerHTML = `${10 - numGuess}`
     numGuess++
 }
