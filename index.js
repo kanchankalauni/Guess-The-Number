@@ -96,6 +96,7 @@ function newGame(message) {
         remaining.innerHTML = `${10}`
         userInput.removeAttribute(`disabled`)
         startOver.removeChild(p)
+        lowOrHigh.innerHTML = ''
         playGame = true
     })
 }
