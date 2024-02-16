@@ -34,3 +34,46 @@
 #navBox2{
     background-color: rgb(196, 196, 196);
 }
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.753);
+    color: white;
+    gap: 10px;
+    padding-top: 5%;
+}
+
+#guess{
+    font-size: 400%;
+}
+
+#guessField{
+    margin-top: 10%;
+    margin-left: 19%;
+    font-size: 130%;
+}
+
+#subt{
+    margin-top: 10%;
+    margin-left: 30%;
+    font-size: 120%;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+}
+
+.resultParas{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lowOrHigh{
+    font-size: 150%;
+}
