@@ -23,6 +23,7 @@ if (playGame) {
 }
 
 function validateGuess(guess) {
+    //To check whether the entered value is valid or not
     if(isNaN(guess)){
         alert('Please enter a valid number')
     }
@@ -34,7 +35,7 @@ function validateGuess(guess) {
     }
     else{
         prevGuess.push(guess)
-        if (numGuess === 11) {
+        if (numGuess === 10) {
             displayGuess(guess)
             displayMessage(`Game Over. Random number was ${randomNumber}`)
             endGame()
@@ -47,6 +48,7 @@ function validateGuess(guess) {
 }
 
 function checkGuess(guess) {
+    //Tells that the guessed value is correct or not
     if (guess === randomNumber) {
         displayMessage(`You guessed it right`)
         endGame()
@@ -60,17 +62,20 @@ function checkGuess(guess) {
 }
 
 function displayGuess(guess) {
+    //To empty the user input and update the array values acc to the guess
     userInput.value = ''
     guessesSlot.innerHTML += `${guess}  `
-    numGuess++
     remaining.innerHTML = `${10 - numGuess}`
+    numGuess++
 }
 
 function displayMessage(message) {
+    //To display the message
     lowOrHigh.innerHTML = `<h2>${message}</h2>`
 }
 
 function endGame(message) {
+    //To end the game
     userInput.value = ''
     userInput.setAttribute('disabled', '')
     p.classList.add('button')
@@ -81,6 +86,7 @@ function endGame(message) {
 }
 
 function newGame(message) {
+    //To start the new game
     const newGameButton = document.querySelector('#newGame')
     newGameButton.addEventListener('click', function (e) {
         randomNumber = parseInt(Math.random()*100+1)
